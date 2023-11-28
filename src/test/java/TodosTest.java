@@ -111,7 +111,7 @@ public class TodosTest {
         Epic epic = new Epic(55, subtasks);
         Meeting meeting = new Meeting(
                 555,
-                "Выкатка 3й версии приложения",
+                "Молоко, цены",
                 "Приложение Нетобанка",
                 "Во вторник после обеда");
 
@@ -120,7 +120,7 @@ public class TodosTest {
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
-        Task[] actual = todos.search("о");
+        Task[] actual = todos.search("Молоко");
         Task[] expected = {simpleTask, epic, meeting};
 
         Assertions.assertArrayEquals(expected, actual);
